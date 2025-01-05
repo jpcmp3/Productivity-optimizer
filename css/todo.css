@@ -1,0 +1,142 @@
+/* General styles for the todo board */
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  box-sizing: border-box; /* Ensure padding and borders are included in width */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.board {
+  overflow: scroll;
+}
+
+#todo-form {
+  padding: 2rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+#todo-form input {
+  padding: 1rem;
+  margin-right: 0.5rem;
+  width: 30%;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  font-size: 14px;
+  outline: none;
+}
+
+#todo-form button {
+  padding: 1rem 2rem;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  background: white;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#todo-form button:hover {
+  scale: 1.1;
+}
+
+/* --- BOARD --- */
+.lanes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em 0;
+  height: 100%;
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+  color: black;
+}
+
+.swim-lane {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  padding: 1em;
+  border-radius: 4px;
+  width: 30%;
+  min-height: 120px;
+  background: rgba(213, 203, 243, 0.5);
+  flex-shrink: 0;
+}
+
+.task {
+  background: white;
+  color: black;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  padding: 1em;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: move;
+  transition: 0.3s;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow: hidden;
+}
+
+.is-dragging {
+  scale: 1.1;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  background: rgb(50, 50, 50);
+  color: white;
+}
+
+.green {
+  background: rgb(207, 205, 168);
+}
+
+.red {
+  background: rgb(189, 144, 133);
+}
+
+.blue {
+  background: rgb(164, 213, 253);
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 805px) {
+  .lanes {
+    flex-direction: column; /* Switch to vertical stacking */
+    padding: 1rem; /* Reduce padding to avoid overflow */
+  }
+
+  .swim-lane {
+    width: 100%; /* Make each lane take up full width on small screens */
+    margin-bottom: 1em; /* Add space between the lanes */
+  }
+
+  #todo-form input {
+    width: 85%; /* Increase width of input field on smaller screens */
+  }
+
+  #todo-form button {
+    width: 15%; /* Make button take up more space on smaller screens */
+  }
+
+  #todo-form {
+    padding: 1rem;
+    margin: 0;
+  }
+}

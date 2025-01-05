@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/pomodoro.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="home.html">Home page</a></li>
+        <li><a href="todolist.html">Kanban</a></li>
+        <li><a href="pomodoro.html" class="active">Pomodoro</a></li>
+        <li><a href="weather.html">Weather</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+
+    <h1>Productivity timer</h1>
+    <div class="container">
+      <p>
+        Start the timer and get productive. Rest when the notification sound
+        goes off. Learn more about the Pomodoro technique is and why it is so
+        effective.
+        <a href="https://youtu.be/mNBmG24djoY" target="_blank">Watch a Video</a>
+        or
+        <a
+          href="https://todoist.com/productivity-methods/pomodoro-technique"
+          target="_blank"
+          >Read an Article</a
+        >.
+      </p>
+    </div>
+
+    <div class="container" id="pomodoro-container">
+      <!-- Work Timer Label -->
+      <p id="work" class="label">Work:</p>
+
+      <!-- Cycles Label -->
+      <p id="cycles" class="label">Cycles:</p>
+
+      <!-- Break Timer Label -->
+      <p id="break" class="label">Break:</p>
+
+      <!-- Work Timer -->
+      <div id="work-timer" class="timer">
+        <p id="w_minutes"></p>
+        <p class="semicolon">:</p>
+        <p id="w_seconds"></p>
+      </div>
+
+      <!-- Cycles Counter -->
+      <p id="cycles_counter" class="timer"></p>
+
+      <!-- Break Timer -->
+      <div id="break-timer" class="timer">
+        <p id="b_minutes"></p>
+        <p class="semicolon">:</p>
+        <p id="b_seconds"></p>
+      </div>
+
+      <!-- Control Buttons -->
+      <button id="start" class="btn">Start</button>
+      <button id="reset" class="btn">Reset</button>
+      <button id="pause" class="btn">Pause</button>
+    </div>
+
+    <script src="javascript/pomodoro.js"></script>
+    <script src="javascript/burger.js"></script>
+  </body>
+</html>

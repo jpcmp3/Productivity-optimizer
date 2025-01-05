@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+
+body {
+  padding: 0px 5rem;
+  margin: 0;
+  color: white;
+  background: url("../public/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Roboto Slab", serif;
+  min-height: 100vh;
+}
+
+.home-desc {
+  text-align: center;
+  padding: 0 20%;
+}
+
+#homepage-text {
+  font-size: 3.5rem;
+  text-align: center;
+  padding-top: 7rem;
+}
+
+.navbar {
+  background: rgb(255, 255, 255, 0.01); /* Transparent background */
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.9);
+  position: sticky;
+  padding: 0.35em 0px;
+  top: 0;
+  z-index: 1000;
+  margin-top: 0.8rem;
+  margin-bottom: 5rem;
+}
+
+.navbar ul {
+  list-style-type: none;
+  justify-content: center; /* Centers nav items horizontally */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%; /* Takes up full width of the navbar */
+}
+
+.navbar li {
+  margin: 0 15px; /* Space between links */
+}
+
+.navbar a {
+  color: white;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+}
+
+#pomodoro-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+div > p > a {
+  color: rgb(105, 226, 206);
+}
+
+.navbar a:hover,
+.active {
+  background: rgba(30, 24, 116, 0.5);
+  scale: 1.05;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  justify-self: end;
+  z-index: 2000; /* Make sure burger is above other elements */
+}
+
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.01);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.9);
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+@media screen and (max-width: 805px) {
+  body {
+    padding: 0px 1rem;
+  }
+
+  .navbar {
+    padding: 2rem 0;
+  }
+
+  /* Hide the navbar completely */
+  .navbar ul {
+    display: none; /* Hide nav-links */
+  }
+
+  /* Display the burger menu */
+  .burger {
+    display: flex;
+    position: absolute;
+    top: 15px;
+    right: 15px; /* Position burger on the right side */
+  }
+
+  .navbar ul.active {
+    display: flex; /* Show nav-links when active */
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Adjust top position to avoid overlap with the burger menu */
+    left: 0;
+    background: rgba(85, 70, 169, 0.7);
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: add shadow for better visibility */
+  }
+
+  .navbar a {
+    padding: 1rem;
+    text-align: center;
+  }
+}

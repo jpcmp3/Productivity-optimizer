@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/todo.css" />
+    <script src="javascript/todo.js" defer></script>
+    <script src="javascript/drag.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="home.html">Home page</a></li>
+        <li><a href="todolist.html" class="active">Kanban</a></li>
+        <li><a href="pomodoro.html">Pomodoro</a></li>
+        <li><a href="weather.html">Weather</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+    <h1>Keep track of your tasks</h1>
+
+    <div class="container board">
+      <form id="todo-form">
+        <input type="text" placeholder="New TODO..." id="todo-input" />
+        <button type="submit">Add</button>
+        <button type="button" id="clear-all-btn">Clear All</button>
+        <!-- New Clear All button -->
+      </form>
+
+      <div class="lanes">
+        <div class="swim-lane green" id="todo-lane">
+          <h3 class="heading">To do</h3>
+        </div>
+
+        <div class="swim-lane blue" id="in-progress-lane">
+          <h3 class="heading">In progress</h3>
+        </div>
+
+        <div class="swim-lane red" id="done-lane">
+          <h3 class="heading">Completed</h3>
+        </div>
+      </div>
+    </div>
+    <script src="javascript/burger.js"></script>
+  </body>
+</html>
