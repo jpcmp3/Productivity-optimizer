@@ -33,6 +33,8 @@ async function checkWeather(city) {
       weatherIcon.src = "public/weather/drizzle.png";
     } else if (data.weather[0].main == "Mist") {
       weatherIcon.src = "public/weather/mist.png";
+    } else if (data.weather[0].main == "Snow") {
+      weatherIcon.src = "public/weather/snow.png";
     }
 
     document.querySelector(".weather").style.display = "block";
